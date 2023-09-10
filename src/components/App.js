@@ -2,15 +2,28 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import Addcontact from './Addcontact';
-import Contactlist from './Contactlist';
+import ContactList from './ContactList';
 
 
 function App() {
+
+  const contacts = [
+    {
+      id:"1",
+      "name":"Kritvi Sharma",
+      "email":"kritvisharma0912@gmail.com",
+    },
+    {
+      id:"2",
+      "name":"Aryan Vatsal",
+      "email":"aryanvatsal04@gmail.com",
+    },
+  ]
   return (
-    <div>
+    <div className = "ui container">
       <Header />
       <Addcontact />
-      <Contactlist /> 
+      <ContactList contacts= {contacts}/> 
     </div>
   );
 }
