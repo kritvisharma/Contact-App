@@ -1,19 +1,22 @@
 import React from "react";
+import user from "../images/user.png";
 
-const CardContact = (props) => {
-  const { contact } = props; // Destructure the contact prop
+const ContactCard = (props) => {
+  const { name, email } = props.contact; // Destructure the contact prop
 
   return (
     <div className="item">
+        <br></br>
+      <img className="ui avatar image" src={user} alt="user" />
       <div className="content">
-        <div className="header">{contact.name}</div>
-        <div>{contact.email}</div>
-        <div>
-          <i className="trash alternate outline icon" style={{ color: "red", marginTop: "7px" }}></i>
-        </div>
+        <div className="header">{name}</div>
+        <div>{email}</div>
+      </div>
+      <div>
+        <span className="trash alternate outline icon" style={{ color: "red" , marginTop: "7px"}}></span>
       </div>
     </div>
   );
 };
 
-export default CardContact;
+export default ContactCard;

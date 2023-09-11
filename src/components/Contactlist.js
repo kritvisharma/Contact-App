@@ -1,8 +1,8 @@
 import React from  "react";
-import ContactCard from "./contactcard";
+import ContactCard from './ContactCard';
 
 
-const contactlist= (props)=>{
+const ContactList= (props)=>{
 
     const renderContactList = props.contacts.map((contact) => {
         return (
@@ -16,4 +16,4 @@ const contactlist= (props)=>{
     );
 };
 
-export default contactlist;
+export default ContactList;
