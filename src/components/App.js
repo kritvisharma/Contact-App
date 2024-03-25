@@ -8,13 +8,19 @@ import ContactList from './ContactList';
 function App() {
 
  const [contacts, setContacts] = useState([]); //intialization of useState with empty array
+
+ const addContactHandler= (contact) =>{
+  console.log(contact);
+ }
+
   return (
     <div className = "ui container">
       <Header />
-      <Addcontact />
-      <ContactList contacts= {contacts}/> 
+      <Addcontact addContactHandler = {addContactHandler}/>
+      <ContactList contacts = {contacts} />  
     </div>
   );
 }
 
 export default App;
+//property name ={array/thing that has to be passed on as prop}
