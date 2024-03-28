@@ -2,7 +2,7 @@ import React from "react";
 import user from "../images/user.png";
 
 const ContactCard = (props) => {
-  const { name, email } = props.contact; // Destructure the contact prop
+  const { id, name, email } = props.contact; // Destructure the contact prop
 
   return (
     <div className="item">
@@ -13,7 +13,7 @@ const ContactCard = (props) => {
         <div>{email}</div>
       </div>
       <div>
-        <span className="trash alternate outline icon" style={{ color: "red" , marginTop: "7px"}}></span>
+        <i className="trash alternate outline icon" style={{ color: "red" , marginTop: "7px"}} onClick={()=>props.clickHnadler(id)}></i>
       </div>
     </div>
   );
